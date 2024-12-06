@@ -4,8 +4,6 @@ Each dictionary entry represents a snapshot of a **single round's state** during
 
 ---
 
-## 📘 **Data Dictionary**
-
 | Key                  | Data Type  | Description                                                               |
 |----------------------|------------|---------------------------------------------------------------------------|
 | `config_id`         | **int**    | The ID representing the configuration setting (e.g., different initial stacks and small blind amounts). |
