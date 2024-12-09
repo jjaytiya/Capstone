@@ -6,7 +6,7 @@ Each dictionary entry represents a snapshot of a **single round's state** during
 
 | Key                  | Data Type  | Description                                                               |
 |----------------------|------------|---------------------------------------------------------------------------|
-| `config_id`         | **int**    | The ID representing the configuration setting (e.g., different initial stacks and small blind amounts). |
+| `config_id`         | **int**    | The ID representing the number of hands. |
 | `round`             | **str**    | The current street of the game (e.g., `"preflop"`, `"flop"`, `"turn"`, `"river"`).|
 | `acting_player`     | **str**    | A unique identifier representing the player who is currently acting (UUID).  |
 | `action`            | **str**    | The action the player chose to take (`"fold"`, `"call"`, `"raise"`).       |
