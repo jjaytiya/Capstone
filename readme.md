@@ -1,21 +1,20 @@
 ## 📘 Data Dictionary
 
-Each dictionary entry represents a snapshot of a **single round's state** during a poker game. Each snapshot contains:
 
----
+| **Field Name**         | **Description**                                                                                                                                           |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `game_id`              | Unique identifier for each game (UUID)                                                                                                                     |
+| `hand_id`              | The current round count (hand_id)                                                                                                                          |
+| `round_index`          | The current street (e.g., pre-flop, flop, turn, river)                                                                                                     |
+| `player_name`          | The name of the player taking the action                                                                                                                   |
+| `action`               | The action taken by the player (e.g., 'call', 'raise', 'fold')                                                                                           |
+| `amount`               | The amount of money involved in the action (for raise or call)                                                                                             |
+| `hole_cards`           | Hole cards of the player, represented as a string of card values (e.g., '2H-3D') if available                                                            |
+| `community_cards`      | Community cards at that point in the round, represented as a string of card values (e.g., '5H-7S-9C')                                                    |
+| `pot`                  | The total amount of money in the pot at that point                                                                                                         |
+| `player_stack`         | The remaining stack of the player after the action                                                                                                        |
+| `small_blind`          | The small blind amount                                                                                                                                    |
+| `big_blind`            | The big blind amount                                                                                                                                      |
+| `winner`               | The winner of the round (empty until determined at the round's end)                                                                                      |
 
-| Key                  | Data Type  | Description                                                               |
-|----------------------|------------|---------------------------------------------------------------------------|
-| `config_id`         | **int**    | The ID representing the number of hands. |
-| `round`             | **str**    | The current street of the game (e.g., `"preflop"`, `"flop"`, `"turn"`, `"river"`).|
-| `acting_player`     | **str**    | A unique identifier representing the player who is currently acting (UUID).  |
-| `action`            | **str**    | The action the player chose to take (`"fold"`, `"call"`, `"raise"`).       |
-| `action_amount`     | **int/str** | The amount associated with the action (only relevant for `"raise"` action). |
-| `hole_cards`        | **str**    | A comma-separated string representing the hole cards (e.g., `"7D,4C"`).    |
-| `community_cards`    | **str**    | A comma-separated string representing the community cards (e.g., `"9H,JD,3S"`).|
-| `pot`               | **int**    | The total amount currently in the pot.                                    |
-| `stacks`            | **str**    | A semicolon-separated string showing the stacks of all players (e.g., `"1000;1200;1500;1000"`).|
-| `actions_this_street`| **str**    | A description of actions taken during the current street (e.g., `uuid1:raise:500;uuid2:call`).|
-
----
-
+This structure captures all key information for each action taken during the game. Let me know if you'd like to add or adjust anything!
