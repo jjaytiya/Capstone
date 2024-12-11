@@ -16,5 +16,3 @@
 | `small_blind`          | The small blind amount                                                                                                                                    |
 | `big_blind`            | The big blind amount                                                                                                                                      |
 | `winner`               | The winner of the round (empty until determined at the round's end)                                                                                      |
-
-This structure captures all key information for each action taken during the game. Let me know if you'd like to add or adjust anything!
