@@ -1,6 +1,5 @@
 ## 📘 Data Dictionary
 
-
 | **Field Name**         | **Description**                                                                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `game_id`              | Unique identifier for each game (UUID)                                                                                                                     |
@@ -16,3 +15,40 @@
 | `small_blind`          | The small blind amount                                                                                                                                    |
 | `big_blind`            | The big blind amount                                                                                                                                      |
 | `winner`               | The winner of the round (empty until determined at the round's end)                                                                                      |
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 📊 Modeling Performance Insight:
+
+### Logistic Regression Performance
+
+### Accuracy
+**0.7941**
+
+### Classification Report
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| **0** | 0.70      | 0.73   | 0.71     | 622     |
+| **1** | 0.84      | 0.81   | 0.82     | 737     |
+| **2** | 0.86      | 0.87   | 0.87     | 414     |
+
+### Overall Metrics
+| Metric       | Value  |
+|--------------|--------|
+| **Accuracy** | 0.79   |
+| **Macro Avg**|        |
+| Precision    | 0.80   |
+| Recall       | 0.80   |
+| F1-Score     | 0.80   |
+| **Weighted Avg** |    |
+| Precision    | 0.80   |
+| Recall       | 0.79   |
+| F1-Score     | 0.79   |
+
+### Logistic Regression Coefficients
+
+![alt text](https://github.com/jjaytiya/Capstone/blob/main/images/Logistic_Regression_Coefficients.png)
+
+- **Strongest positive influences:** `bet_to_pot_ratio`, `aggression`, `round_label`.
+- **Strongest negative influences:** `community5_rank`, `community4_rank`, `player_stack`, `pot`.
+- **Minimal effects:** `poker_hand`, `community1_rank`, `community2_rank`, `community3_rank`, `card1_rank`, `card2_rank`.
