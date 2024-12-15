@@ -1,5 +1,6 @@
 ## 📘 Data Dictionary
 
+
 | **Field Name**         | **Description**                                                                                                                                           |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `game_id`              | Unique identifier for each game (UUID)                                                                                                                     |
@@ -20,35 +21,40 @@
 
 ## 📊 Modeling Performance Insight:
 
-### Logistic Regression Performance
+I have run a total of 3 models:
 
-### Accuracy
-**0.7941**
+1. Logistic Regression
+2. Random Forest
+3. Neural Network
 
-### Classification Report
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-| **0** | 0.70      | 0.73   | 0.71     | 622     |
-| **1** | 0.84      | 0.81   | 0.82     | 737     |
-| **2** | 0.86      | 0.87   | 0.87     | 414     |
+The results in all 3 models show at least 80% accuracy. However, the Random Forest model seems to be overfitting, as the training score is 99%, while the testing score is 85%.
 
-### Overall Metrics
-| Metric       | Value  |
-|--------------|--------|
-| **Accuracy** | 0.79   |
-| **Macro Avg**|        |
-| Precision    | 0.80   |
-| Recall       | 0.80   |
-| F1-Score     | 0.80   |
-| **Weighted Avg** |    |
-| Precision    | 0.80   |
-| Recall       | 0.79   |
-| F1-Score     | 0.79   |
 
-### Logistic Regression Coefficients
+### 📍 Logistic Regression Performance
+### Accuracy **80%**
 
-![alt text](https://github.com/jjaytiya/Capstone/blob/main/images/Logistic_Regression_Coefficients.png)
+| Metric     | Class 0 | Class 1 | Class 2 |
+|-------------|---------|---------|---------|
+| Precision   | 0.70    | 0.84    | 0.89    |
+| Recall      | 0.74    | 0.81    | 0.87    |
+| F1-score    | 0.72    | 0.82    | 0.88    |
+      
+---
+### 📍 Random Forest Performance
+### Accuracy **85%**
 
-- **Strongest positive influences:** `bet_to_pot_ratio`, `aggression`, `round_label`.
-- **Strongest negative influences:** `community5_rank`, `community4_rank`, `player_stack`, `pot`.
-- **Minimal effects:** `poker_hand`, `community1_rank`, `community2_rank`, `community3_rank`, `card1_rank`, `card2_rank`.
+| Metric     | Class 0 | Class 1 | Class 2 |
+|-------------|---------|---------|---------|
+| Precision   | 0.79    | 0.88    | 0.88    |
+| Recall      | 0.78    | 0.91    | 0.85    |
+| F1-score    | 0.79    | 0.90    | 0.87    |
+
+---
+### 📍 Neural Netwok Performance
+### Accuracy **83%**
+| Metric     | Class 0 | Class 1 | Class 2 |
+|-------------|---------|---------|---------|
+| Precision   | 0.76    | 0.88    | 0.86    |
+| Recall      | 0.77    | 0.87    | 0.87    |
+| F1-score    | 0.76    | 0.87    | 0.87    |
+
